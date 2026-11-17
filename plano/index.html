@@ -60,7 +60,7 @@
 <script>
   /* Cada item: [texto, nível 0|1|2] ; títulos de grupo: ["#", texto] */
   var PLANO = [
-    { id:"kpi", titulo:"1. Definição de KPIs", nota:"Marketing (aquisição) e Produto. Depois de definidos, vão para a planilha de acompanhamento mensal.", itens:[
+    { id:"kpi", titulo:"1. Definição de KPIs", nota:"Marketing (aquisição) e Produto. Os números de cada mês são lançados em Indicadores (Central › Indicadores).", link:"../indicadores/", itens:[
       ["#","Marketing — Aquisição"],
       ["Instagram",0], ["Seguidores",1], ["Alcance",1],
       ["Acessos ao site",0],
@@ -112,7 +112,7 @@
 
   PLANO.forEach(function (sec) {
     var h = '<section data-sec="' + sec.id + '"><header><h2>' + esc(sec.titulo) + '</h2><span class="badge"></span></header><div class="body">';
-    if (sec.nota) h += '<div class="note">' + esc(sec.nota) + '</div>';
+    if (sec.nota) h += '<div class="note">' + esc(sec.nota) + (sec.link ? ' <a href="' + sec.link + '">Abrir Indicadores →</a>' : '') + '</div>';
     sec.itens.forEach(function (it, i) {
       if (it[0] === "#") { h += '<h3>' + esc(it[1]) + '</h3>'; return; }
       var key = sec.id + "-" + i;
