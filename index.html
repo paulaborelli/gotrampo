@@ -5,102 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAMFBMVEVqnNa3z+ve6fY8fsqGr94VZcD8/f5Mic+oxufW5PQrdMbi7PcibcNsnteYu+PG2e9Yu95HAAAAEHRSTlPEyeDbv/780MPa6OTxw8DQ9GkmSgAAAU9JREFUeNrt07FLVVEcB/DPva9LIVHeIWq8g5uGDxJqzKZwkOfwEJwC/wHBLRocGhqD9ke7EHdzEbSp9YVFGAo3KBIRuaH4XkjHhnd76HsuzfWbDnw45/c958eJmi6v2L8N8VSapmmb+G66mJ2DjV14wuRXb46W4Ao8TUFppEC4D7VxHJdwum+ihLVOdVRccI8kqxYhryDi7fotRiPm1q+zUkFg1k4PZn2j6KdKCglZzKbQOBf3tCFQBApJ3ocaDwVWuhQC9Qo6PHvRojxjf7XFEqImVxdyqB2YbkOy8LJ3wV8/uqAj6sLZxp/mn8ENvoBWP1XyCM9HMuExxhr9t/JpZn77ZOvOng8z89tbVM17Nd2e3Lx0gqWPfzHaBHXjQxAmMsu5chCSV8XRz0MXIWoS3wTXvg/uCK/B7eHmc3WE9jCEd7kH7y/Gjf5/zsH6DQoYYV6gtWXzAAAAAElFTkSuQmCC">
-<title>GoTrampo — Central</title>
+<title>GoTrampo — Indicadores</title>
+<meta http-equiv="refresh" content="1; url=https://script.google.com/macros/s/AKfycbys4zGhmVOE5ZU9TqrSLij27SreoKvJml7Ly_NZ11XaZyT7l_jrUg_NgHmUM42ZAdOL/exec">
 <style>
-  :root { --blue:#1565C0; --blue-dark:#0D47A1; --blue-soft:#E3EEFB; --green:#1e7e34; --green-soft:#e6f4ea;
-          --amber:#a3720b; --amber-soft:#fff4d6; --grey:#667085; --line:#e6eaf0; --bg:#f3f6fb; --card:#fff; --text:#1d2433; }
+  .logo img { width:30px; height:auto; display:block; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:"Segoe UI", Roboto, Arial, sans-serif; color:var(--text); background:var(--bg); font-size:15px; }
-  header { background:linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%); color:#fff; padding:28px 16px 32px; }
-  .wrap { max-width:960px; margin:0 auto; }
-  .brand { display:flex; align-items:center; gap:14px; }
-  .wm { height:46px; width:auto; flex:none; display:block; }
-  .brand > div { border-left:1px solid rgba(255,255,255,.35); padding-left:14px; }
-  .logo { width:48px; height:48px; border-radius:50%; background:#fff; color:var(--blue); font-weight:bold; font-size:17px;
-          display:flex; align-items:center; justify-content:center; flex:none; }
-  h1 { font-size:22px; margin:0; }
-  header p { margin:4px 0 0; font-size:13px; opacity:.85; }
-  main { padding:0 16px 40px; }
-  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--grey); margin:26px 0 10px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:14px; }
-  a.tile, div.tile { display:block; background:var(--card); border-radius:14px; padding:18px; text-decoration:none; color:inherit;
-          box-shadow:0 2px 10px rgba(16,24,40,.07); border:1px solid var(--line); position:relative; }
-  a.tile:hover { border-color:var(--blue); box-shadow:0 6px 18px rgba(21,101,192,.18); transform:translateY(-1px); }
-  a.tile { transition:all .15s; }
-  div.tile.soon { opacity:.72; background:#fafbfd; }
-  .ico { font-size:26px; line-height:1; margin-bottom:10px; }
-  .tile h3 { margin:0 0 4px; font-size:16px; }
-  .tile p { margin:0; font-size:13px; color:var(--grey); line-height:1.45; }
-  .chip { position:absolute; top:14px; right:14px; font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; letter-spacing:.3px; }
-  .chip.on { background:var(--green-soft); color:var(--green); }
-  .chip.soon { background:var(--amber-soft); color:var(--amber); }
-  .links { display:flex; flex-wrap:wrap; gap:10px; }
-  .links a { background:#fff; border:1px solid var(--line); border-radius:10px; padding:9px 14px; font-size:13px; color:var(--blue-dark); text-decoration:none; }
-  .links a:hover { border-color:var(--blue); }
-  footer { text-align:center; font-size:11px; color:#98a2b3; padding:0 16px 30px; line-height:1.6; }
-  @media (max-width:520px) { header { padding:22px 16px 50px; } h1 { font-size:19px; } }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+         font-family:"Segoe UI", Roboto, Arial, sans-serif; background:linear-gradient(160deg,#1565C0 0%,#0D47A1 100%); }
+  .card { background:#fff; border-radius:16px; max-width:380px; width:100%; padding:32px 28px; text-align:center; box-shadow:0 12px 32px rgba(0,0,0,.18); }
+  .logo { width:64px; height:64px; border-radius:50%; background:#1565C0; color:#fff; font-weight:bold; font-size:20px;
+          display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
+  h1 { font-size:18px; margin:0 0 6px; color:#1d2433; }
+  p { font-size:13px; color:#667085; line-height:1.5; margin:0 0 20px; }
+  a.btn { display:inline-block; background:#1565C0; color:#fff; text-decoration:none; padding:12px 22px; border-radius:10px; font-weight:bold; font-size:14px; }
+  a.btn:hover { background:#0D47A1; }
+  small { display:block; margin-top:16px; font-size:11px; color:#99a; }
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="brand">
-      <img class="wm" src="data:image/png;base64,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" alt="GoTrampo">
-      <div>
-        <h1>Central</h1>
-        <p>Tudo o que usamos para tocar o negócio, num só lugar.</p>
-      </div>
-    </div>
+  <div class="card">
+    <div class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABMCAQAAAA4/3r+AAAEG0lEQVR42u1b23WjQAy95mwDQwnjEnAJbAlsCWwJkxJwCW6BlGCXgEuAEkwJ2g/j2E5AIw0DTs5Z8WMnRo95aK6uYEPwiEGOHBYWBgZy6bBV/No+WAGAHh06nHBC57mTpi9DJR3pQmFyIYguS44aRk9Djsz0/dPOu2DXb4Ylzh+E2g5kNQEUM50nIqq87julRicLwFBNMST3jH0TNKvWF4ClNor7Let+PmNnZVwAWYSlc5WSdT/i3D6Pfiz3mwXdJ6LHWXhc+y3FEsus/RiDdLkn1rvqYzT3C2b8m9hznAznWYkcscRO/schi2Qjg7t+2NAVLrQqmOCT7SgAsGgRU1L0GGagiuo+UCn+OtPKhgCDi/CWXhzo1zmQj7/cSoo+AVAKVO6xQ4oUKXZ48yLEMZ1aK3v0IiuCzHAYQYOV+iRu1VaMF+o1BJANgVAEKuWHDfmtlIGAz/ocOTA5vVK4FG6Fn4USLPb0FSXcsqjFbviscGd3nTDHDrD3bKK9+DjLFrPCxme9FZV0G7czrGTc7G2ImLSWehPZZTJnP98t/d04rcDghITNy5JDhzP89VOIsH4kIgfCftOrhiLQj4RRbtgNft1CRjhui1lJWFjgg9i5eOK5OShmWOn4AJwa8Twyc9PfdCjJ8QGc2MlzrGIuu5+Yb5+tcED7wO6Bkx+lFIHFeSbO5RwWKv1YyI9GXQDI0qPRSo22BjQqofgaKj/OS0OFoDSv1M4QteQoI0MgQxk5AUviSFWRdegFSW9uRdYrjr4UvQSy6qUeXc91ZCsHAg2sRGy+YB1WYovuBiU6vEVUvJ/I+p0XOGvkVplH58x4Xjo6Mxef2rXBFYSGG7Vj7HS+eFtjAStxlReitl4R00q83olk9GN0aHJfjyxa9+o1PbKw/mH1NLrNJBmmBRdBXUptB7d+GBU7nLbyJne9TJ/4pr5iAVVL1ZPaStjkm2fl07Uhfy/kepmPpxh6nIfrsSysnmDeGTtlx0ViRfmsxFgTfJx4OgbQVVor0C8hmbGDktWOfP2aCammObMMq0gy8/53ZlWvIv5N7Nt8Dd9F/O4zcGY5tx+whDjK6ocE8GL5HwBDs/Q/IYBMTLB/0wAKlgZ7aQCy/kwZkJ1WCcChFTxBxFHfp5V28WjR3X4mLwLqtmwdMMdD4wvjhptBby0UwDg0rkbweeZ9ws6tFcAdzDm4iRXd4x0nnNHDwCBD4d0dPbbr5KDbHigiPnIpe2466gxwkDiss54Ca0KJM1OWhMjfVcHQsH0vFLVvsu4S8lVWugJnh5eg0TP+RNDW4ffqeDoi7d3qGJ0lTuI55PrxFe6PvcHRfPfM72fmtO8vNWsBNzm1aKgSBtEqeOgVA7i/Bsc1e2pFU2kFMDdVsmfIB9rbDLR3h/MA7r6B/ANOQkD/Rn/fgQAAAABJRU5ErkJggg==" alt="GoTrampo"></div>
+    <h1>GoTrampo — Indicadores</h1>
+    <p>Abrindo o sistema... Se não abrir sozinho, toque no botão.<br>O acesso é protegido: só entra quem está autorizado com a conta Google.</p>
+    <a class="btn" id="abrir" href="https://script.google.com/macros/s/AKfycbys4zGhmVOE5ZU9TqrSLij27SreoKvJml7Ly_NZ11XaZyT7l_jrUg_NgHmUM42ZAdOL/exec">Abrir o sistema</a>
+    <small>Esta página não guarda nenhum indicador.</small>
   </div>
-</header>
-
-<main>
-  <div class="wrap">
-    <h2>Gestão</h2>
-    <div class="grid">
-      <a class="tile" href="./financeiro/">
-        <span class="chip on">NO AR</span>
-        <div class="ico">💰</div>
-        <h3>Financeiro</h3>
-        <p>Lançamentos, contas a pagar e receber, fluxo de caixa, DRE e PDFs para o contador. Acesso com conta Google autorizada.</p>
-      </a>
-      <a class="tile" href="./plano/">
-        <span class="chip on">NO AR</span>
-        <div class="ico">✅</div>
-        <h3>Plano de ação</h3>
-        <p>Definições da reunião de 13/11: KPIs, soluções e valores, site, anúncios e calendário de conteúdo.</p>
-      </a>
-      <div class="tile soon">
-        <span class="chip soon">EM BREVE</span>
-        <div class="ico">📊</div>
-        <h3>Indicadores (KPIs)</h3>
-        <p>Acompanhamento mensal de Marketing e Produto: seguidores, alcance, oportunidades, clientes, profissionais ativos.</p>
-      </div>
-      <div class="tile soon">
-        <span class="chip soon">EM BREVE</span>
-        <div class="ico">🤝</div>
-        <h3>CRM</h3>
-        <p>Funil de oportunidades (inbound e outbound), empresas, planos e valores.</p>
-      </div>
-      <div class="tile soon">
-        <span class="chip soon">EM BREVE</span>
-        <div class="ico">📅</div>
-        <h3>Calendário de conteúdo</h3>
-        <p>Cards e vídeos semanais do Instagram para profissionais e para empresas.</p>
-      </div>
-    </div>
-
-    <h2>Atalhos</h2>
-    <div class="links">
-      <a href="https://gotrampo.com" target="_blank" rel="noopener">Site GoTrampo ↗</a>
-      <a href="https://voceeoquevocefaz.com.br" target="_blank" rel="noopener">Blog “Você é o que Você Faz” ↗</a>
-    </div>
-  </div>
-</main>
-
-<footer>
-  Esta página só reúne atalhos. Os dados (financeiro, clientes, indicadores) ficam em ferramentas protegidas por login.<br>
-  Nada de valores, nomes de clientes ou dados pessoais é guardado aqui.
-</footer>
+  <script>
+    setTimeout(function () { window.location.href = document.getElementById('abrir').href; }, 800);
+  </script>
 </body>
 </html>
