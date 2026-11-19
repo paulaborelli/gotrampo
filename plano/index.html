@@ -6,153 +6,32 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAMFBMVEVqnNa3z+ve6fY8fsqGr94VZcD8/f5Mic+oxufW5PQrdMbi7PcibcNsnteYu+PG2e9Yu95HAAAAEHRSTlPEyeDbv/780MPa6OTxw8DQ9GkmSgAAAU9JREFUeNrt07FLVVEcB/DPva9LIVHeIWq8g5uGDxJqzKZwkOfwEJwC/wHBLRocGhqD9ke7EHdzEbSp9YVFGAo3KBIRuaH4XkjHhnd76HsuzfWbDnw45/c958eJmi6v2L8N8VSapmmb+G66mJ2DjV14wuRXb46W4Ao8TUFppEC4D7VxHJdwum+ihLVOdVRccI8kqxYhryDi7fotRiPm1q+zUkFg1k4PZn2j6KdKCglZzKbQOBf3tCFQBApJ3ocaDwVWuhQC9Qo6PHvRojxjf7XFEqImVxdyqB2YbkOy8LJ3wV8/uqAj6sLZxp/mn8ENvoBWP1XyCM9HMuExxhr9t/JpZn77ZOvOng8z89tbVM17Nd2e3Lx0gqWPfzHaBHXjQxAmMsu5chCSV8XRz0MXIWoS3wTXvg/uCK/B7eHmc3WE9jCEd7kH7y/Gjf5/zsH6DQoYYV6gtWXzAAAAAElFTkSuQmCC">
 <title>GoTrampo — Plano de ação</title>
+<meta http-equiv="refresh" content="1; url=https://script.google.com/macros/s/AKfycbys4zGhmVOE5ZU9TqrSLij27SreoKvJml7Ly_NZ11XaZyT7l_jrUg_NgHmUM42ZAdOL/exec?aba=plano">
 <style>
-  :root { --blue:#1565C0; --blue-dark:#0D47A1; --blue-soft:#E3EEFB; --green:#1e7e34; --green-soft:#e6f4ea;
-          --grey:#667085; --line:#e6eaf0; --bg:#f3f6fb; --card:#fff; --text:#1d2433; }
+  .logo img { width:30px; height:auto; display:block; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:"Segoe UI", Roboto, Arial, sans-serif; color:var(--text); background:var(--bg); font-size:15px; }
-  header { background:linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%); color:#fff; padding:22px 16px 46px; }
-  .wrap { max-width:820px; margin:0 auto; }
-  .back { color:#cfe0f7; font-size:13px; text-decoration:none; }
-  .back:hover { color:#fff; }
-  h1 { font-size:21px; margin:10px 0 2px; }
-  header p { margin:0; font-size:13px; opacity:.85; }
-  .prog { margin-top:16px; background:rgba(255,255,255,.22); border-radius:20px; height:10px; overflow:hidden; }
-  .prog > div { height:100%; background:#fff; width:0; transition:width .25s; }
-  .progtxt { font-size:12px; margin-top:6px; opacity:.9; }
-  main { margin-top:-24px; padding:0 16px 50px; }
-  section { background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 2px 10px rgba(16,24,40,.06); margin-bottom:14px; overflow:hidden; }
-  section > header { background:none; color:var(--text); padding:14px 18px; display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--line); cursor:pointer; }
-  section > header h2 { font-size:16px; margin:0; flex:1; }
-  .badge { font-size:11px; font-weight:700; background:var(--blue-soft); color:var(--blue-dark); padding:3px 9px; border-radius:20px; white-space:nowrap; }
-  .badge.done { background:var(--green-soft); color:var(--green); }
-  .body { padding:6px 18px 14px; }
-  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.4px; color:var(--grey); margin:14px 0 4px; }
-  label.t { display:flex; gap:10px; align-items:flex-start; padding:7px 0; cursor:pointer; line-height:1.4; }
-  label.t input { width:18px; height:18px; margin-top:1px; flex:none; accent-color:var(--green); }
-  label.t.sub { margin-left:28px; }
-  label.t.sub2 { margin-left:56px; }
-  label.t input:checked + span { color:#98a2b3; text-decoration:line-through; }
-  .note { font-size:12.5px; color:var(--grey); background:#f7f9fc; border-radius:8px; padding:9px 12px; margin:8px 0 2px; line-height:1.5; }
-  .reset { display:block; margin:6px auto 0; background:none; border:none; color:var(--grey); font-size:12px; text-decoration:underline; cursor:pointer; }
-  .hidden { display:none; }
-  footer { text-align:center; font-size:11px; color:#98a2b3; padding:0 16px 30px; line-height:1.6; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+         font-family:"Segoe UI", Roboto, Arial, sans-serif; background:linear-gradient(160deg,#1565C0 0%,#0D47A1 100%); }
+  .card { background:#fff; border-radius:16px; max-width:380px; width:100%; padding:32px 28px; text-align:center; box-shadow:0 12px 32px rgba(0,0,0,.18); }
+  .logo { width:64px; height:64px; border-radius:50%; background:#1565C0; color:#fff; font-weight:bold; font-size:20px;
+          display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
+  h1 { font-size:18px; margin:0 0 6px; color:#1d2433; }
+  p { font-size:13px; color:#667085; line-height:1.5; margin:0 0 20px; }
+  a.btn { display:inline-block; background:#1565C0; color:#fff; text-decoration:none; padding:12px 22px; border-radius:10px; font-weight:bold; font-size:14px; }
+  a.btn:hover { background:#0D47A1; }
+  small { display:block; margin-top:16px; font-size:11px; color:#99a; }
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <a class="back" href="../"><img src="data:image/png;base64,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" alt="GoTrampo" style="height:34px;width:auto;display:block;margin-bottom:8px">← Central GoTrampo</a>
-    <h1>Plano de ação — reunião de 13/11</h1>
-    <p>Marque o que for sendo concluído. O progresso fica salvo neste navegador.</p>
-    <div class="prog"><div id="barra"></div></div>
-    <div class="progtxt" id="progtxt"></div>
+  <div class="card">
+    <div class="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABMCAQAAAA4/3r+AAAEG0lEQVR42u1b23WjQAy95mwDQwnjEnAJbAlsCWwJkxJwCW6BlGCXgEuAEkwJ2g/j2E5AIw0DTs5Z8WMnRo95aK6uYEPwiEGOHBYWBgZy6bBV/No+WAGAHh06nHBC57mTpi9DJR3pQmFyIYguS44aRk9Djsz0/dPOu2DXb4Ylzh+E2g5kNQEUM50nIqq87julRicLwFBNMST3jH0TNKvWF4ClNor7Let+PmNnZVwAWYSlc5WSdT/i3D6Pfiz3mwXdJ6LHWXhc+y3FEsus/RiDdLkn1rvqYzT3C2b8m9hznAznWYkcscRO/schi2Qjg7t+2NAVLrQqmOCT7SgAsGgRU1L0GGagiuo+UCn+OtPKhgCDi/CWXhzo1zmQj7/cSoo+AVAKVO6xQ4oUKXZ48yLEMZ1aK3v0IiuCzHAYQYOV+iRu1VaMF+o1BJANgVAEKuWHDfmtlIGAz/ocOTA5vVK4FG6Fn4USLPb0FSXcsqjFbviscGd3nTDHDrD3bKK9+DjLFrPCxme9FZV0G7czrGTc7G2ImLSWehPZZTJnP98t/d04rcDghITNy5JDhzP89VOIsH4kIgfCftOrhiLQj4RRbtgNft1CRjhui1lJWFjgg9i5eOK5OShmWOn4AJwa8Twyc9PfdCjJ8QGc2MlzrGIuu5+Yb5+tcED7wO6Bkx+lFIHFeSbO5RwWKv1YyI9GXQDI0qPRSo22BjQqofgaKj/OS0OFoDSv1M4QteQoI0MgQxk5AUviSFWRdegFSW9uRdYrjr4UvQSy6qUeXc91ZCsHAg2sRGy+YB1WYovuBiU6vEVUvJ/I+p0XOGvkVplH58x4Xjo6Mxef2rXBFYSGG7Vj7HS+eFtjAStxlReitl4R00q83olk9GN0aHJfjyxa9+o1PbKw/mH1NLrNJBmmBRdBXUptB7d+GBU7nLbyJne9TJ/4pr5iAVVL1ZPaStjkm2fl07Uhfy/kepmPpxh6nIfrsSysnmDeGTtlx0ViRfmsxFgTfJx4OgbQVVor0C8hmbGDktWOfP2aCammObMMq0gy8/53ZlWvIv5N7Nt8Dd9F/O4zcGY5tx+whDjK6ocE8GL5HwBDs/Q/IYBMTLB/0wAKlgZ7aQCy/kwZkJ1WCcChFTxBxFHfp5V28WjR3X4mLwLqtmwdMMdD4wvjhptBby0UwDg0rkbweeZ9ws6tFcAdzDm4iRXd4x0nnNHDwCBD4d0dPbbr5KDbHigiPnIpe2466gxwkDiss54Ca0KJM1OWhMjfVcHQsH0vFLVvsu4S8lVWugJnh5eg0TP+RNDW4ffqeDoi7d3qGJ0lTuI55PrxFe6PvcHRfPfM72fmtO8vNWsBNzm1aKgSBtEqeOgVA7i/Bsc1e2pFU2kFMDdVsmfIB9rbDLR3h/MA7r6B/ANOQkD/Rn/fgQAAAABJRU5ErkJggg==" alt="GoTrampo"></div>
+    <h1>GoTrampo — Plano de ação</h1>
+    <p>Abrindo o sistema... Se não abrir sozinho, toque no botão.<br>O acesso é protegido: só entra quem está autorizado com a conta Google.</p>
+    <a class="btn" id="abrir" href="https://script.google.com/macros/s/AKfycbys4zGhmVOE5ZU9TqrSLij27SreoKvJml7Ly_NZ11XaZyT7l_jrUg_NgHmUM42ZAdOL/exec?aba=plano">Abrir o sistema</a>
+    <small>O plano e o histórico de marcações ficam na planilha protegida da GoTrampo.</small>
   </div>
-</header>
-
-<main>
-  <div class="wrap" id="app"></div>
-  <button class="reset" id="reset">Limpar todas as marcações</button>
-</main>
-
-<footer>Os itens ficam salvos só neste navegador/dispositivo. Para dividir tarefas com a equipe, o próximo passo é mover isto para uma planilha compartilhada.</footer>
-
-<script>
-  /* Cada item: [texto, nível 0|1|2] ; títulos de grupo: ["#", texto] */
-  var PLANO = [
-    { id:"kpi", titulo:"1. Definição de KPIs", nota:"Marketing (aquisição) e Produto. Os números de cada mês são lançados em Indicadores (Central › Indicadores).", link:"../indicadores/", itens:[
-      ["#","Marketing — Aquisição"],
-      ["Instagram",0], ["Seguidores",1], ["Alcance",1],
-      ["Acessos ao site",0],
-      ["Oportunidades",0], ["Inbound",1], ["Outbound",1],
-      ["Novos clientes",0], ["Por plano",1],
-      ["Clientes",0], ["Plano",1], ["Valor",1],
-      ["#","Produto"],
-      ["Profissionais cadastrados",0],
-      ["Profissionais ativos (ao menos um acesso no mês)",0],
-      ["Oportunidades (vagas) criadas",0],
-      ["Empresas com perfil ativo",0],
-      ["Empresas com oportunidades ativas no mês",0],
-      ["Número de profissionais com acesso no mês",0]
-    ]},
-    { id:"solucoes", titulo:"2. Definição de planos e valores", nota:"Os planos passam a ser apresentados como Soluções.", itens:[
-      ["#","Soluções"],
-      ["Consultorias e Recrutadores",0],
-      ["Pequenas e Médias Empresas",0],
-      ["Grandes Empresas",0],
-      ["Definir valores de cada solução",0]
-    ]},
-    { id:"site", titulo:"3. Reformular o site", itens:[
-      ["Trocar “Planos” por “Soluções”",0],
-      ["Reformular a página de Soluções",0],
-      ["Retirar textos e CTA sobre Teste Grátis",0]
-    ]},
-    { id:"anuncios", titulo:"4. Anúncios: Facebook e Instagram", itens:[
-      ["Configurar a conta de anúncios",0],
-      ["#","Configurar públicos"],
-      ["Público: Empresas",0], ["Público: Profissionais",0],
-      ["#","Criar campanhas de anúncios"],
-      ["Campanha: Empresas",0], ["Campanha: Profissionais",0]
-    ]},
-    { id:"conteudo", titulo:"5. Calendário de conteúdo — Instagram", itens:[
-      ["Criar o calendário de conteúdo",0],
-      ["1 card por semana com dicas para profissionais",1],
-      ["1 card por semana com dicas para empresas sobre pessoas e gestão",1],
-      ["1 vídeo por semana, alternando dicas para profissionais e para empresas",1]
-    ]}
-  ];
-
-  var CHAVE = "gotrampo-plano-1311";
-  var estado = {};
-  try { estado = JSON.parse(localStorage.getItem(CHAVE) || "{}"); } catch (e) { estado = {}; }
-  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {} }
-
-  var app = document.getElementById("app");
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
-
-  PLANO.forEach(function (sec) {
-    var h = '<section data-sec="' + sec.id + '"><header><h2>' + esc(sec.titulo) + '</h2><span class="badge"></span></header><div class="body">';
-    if (sec.nota) h += '<div class="note">' + esc(sec.nota) + (sec.link ? ' <a href="' + sec.link + '">Abrir Indicadores →</a>' : '') + '</div>';
-    sec.itens.forEach(function (it, i) {
-      if (it[0] === "#") { h += '<h3>' + esc(it[1]) + '</h3>'; return; }
-      var key = sec.id + "-" + i;
-      var cls = it[1] === 1 ? " sub" : (it[1] === 2 ? " sub2" : "");
-      h += '<label class="t' + cls + '"><input type="checkbox" data-k="' + key + '" data-s="' + sec.id + '"><span>' + esc(it[0]) + '</span></label>';
-    });
-    app.insertAdjacentHTML("beforeend", h + '</div></section>');
-  });
-
-  function atualizar() {
-    var total = 0, feitos = 0;
-    document.querySelectorAll("section").forEach(function (sec) {
-      var cbs = sec.querySelectorAll("input[type=checkbox]"), f = 0;
-      cbs.forEach(function (c) { if (c.checked) f++; });
-      var b = sec.querySelector(".badge");
-      b.textContent = f + " de " + cbs.length;
-      b.classList.toggle("done", f === cbs.length && cbs.length > 0);
-      total += cbs.length; feitos += f;
-    });
-    var pct = total ? Math.round(feitos * 100 / total) : 0;
-    document.getElementById("barra").style.width = pct + "%";
-    document.getElementById("progtxt").textContent = feitos + " de " + total + " itens concluídos (" + pct + "%)";
-  }
-
-  document.querySelectorAll("input[type=checkbox]").forEach(function (c) {
-    c.checked = !!estado[c.dataset.k];
-    c.addEventListener("change", function () {
-      if (c.checked) estado[c.dataset.k] = 1; else delete estado[c.dataset.k];
-      salvar(); atualizar();
-    });
-  });
-  document.querySelectorAll("section > header").forEach(function (h) {
-    h.addEventListener("click", function () { h.nextElementSibling.classList.toggle("hidden"); });
-  });
-  document.getElementById("reset").addEventListener("click", function () {
-    estado = {}; salvar();
-    document.querySelectorAll("input[type=checkbox]").forEach(function (c) { c.checked = false; });
-    atualizar();
-  });
-  atualizar();
-</script>
+  <script>
+    setTimeout(function () { window.location.href = document.getElementById('abrir').href; }, 800);
+  </script>
 </body>
 </html>
